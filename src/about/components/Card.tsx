@@ -4,7 +4,7 @@ import { IHobbieCard } from "../data/IHobbieCard";
 
 export default async function Card({ data, className }: { data: IHobbieCard[], className?: string }) {
   return (
-    <ul className={cn("grid grid-cols-1 px-5 xl:grid-cols-5 gap-5 h-fit", className)}>
+    <ul className={cn("grid grid-cols-1 px-5 xl:grid-cols-3 2xl:grid-cols-5 gap-5 h-fit", className)}>
       {data.map((hobbie, i) => (
         <li
           key={i}

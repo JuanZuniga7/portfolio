@@ -6,9 +6,9 @@ export default async function Code () {
     const data = await code();
 
     return (
-        <code className="font-mono text-xs lg:text-base flex flex-col">
+        <code className="font-mono text-xs flex flex-col">
             {data.lines.map((line, i) => (
-                <ul key={i} className="flex flex-row gap-x-4">
+                <ul key={i} className="flex flex-row gap-x-2 2xl:gap-x-4">
                     <span className="min-w-7 text-left text-white border-r-indigo-500 border-r-2">
                         {i + 1}
                     </span>

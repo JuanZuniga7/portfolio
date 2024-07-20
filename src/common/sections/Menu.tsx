@@ -15,7 +15,7 @@ export default async function Menu() {
   const t = await getTranslations("Index");
 
   return (
-    <header className="fixed right-10 top-0 lg:top-2 lg:right-1 w-fit h-fit">
+    <header className="hidden lg:flex fixed lg:top-2 lg:right-2 w-fit h-fit">
       <Menubar className="bg-transparent backdrop-blur-2xl lg:py-2 lg:px-5 flex items-center lg:gap-2 border-0">
         {en.map((element, index) => (
           <MenubarMenu key={index}>
@@ -24,13 +24,13 @@ export default async function Menu() {
                           data-[state=open]:text-white rounded-lg cursor-pointer focus:text-white"
             >
               {element.subElements !== undefined ? (
-                <div className="flex items-center text-lg gap-0.5 lg:gap-2">
+                <div className="flex items-center text-xs lg:text-sm gap-0.5">
                   {element.icon} {element.name}
                 </div>
               ) : (
                 <Link
                   href={`/${t("lang")}/${element.link}`}
-                  className="flex items-center gap-0.5 text-lg lg:gap-2"
+                  className="flex items-center gap-0.5 text-xs lg:text-sm"
                 >
                   {element.icon} {element.name}
                 </Link>
@@ -46,7 +46,7 @@ export default async function Menu() {
                     <MenubarItem
                       key={index}
                       className="rounded-lg focus:bg-indigo-500 focus:text-white
-                                                   cursor-pointer w-full text-left"
+                        cursor-pointer w-full text-left text-xs lg:text-sm"
                     >
                       <Link
                         href={`/${t("lang")}/${element.link}#${

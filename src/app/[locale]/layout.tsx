@@ -4,7 +4,6 @@ import { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import Card from "@/common/sections/Card";
-import Background from "@/common/components/Background";
 import Menu from "@/common/sections/Menu";
 import MobileMenu from "@/common/sections/MobileMenu";
 
@@ -27,12 +26,11 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className="w-screen h-screen overflow-x-hidden overflow-y-auto bg-primary font-serif
-        flex flex-col xl:flex-row xl:px-5 items-center justify-center text-white">
+        className="w-screen h-screen overflow-x-hidden overflow-y-auto bg-primary font-serif flex flex-row xl:px-5 items-center justify-center text-white">
         <Menu />
         <MobileMenu />
         <NextIntlClientProvider messages={messages}>
-          <div className="hidden w-[25%] h-full xl:flex items-center">
+          <div className="hidden xl:w-[30%] 2xl:w-[25%] h-full xl:flex items-center">
             <Card />
           </div>
           <main className="w-full h-screen overflow-x-hidden lg:py-5">
