@@ -25,12 +25,13 @@ const contactData: IContactData[] = [
     {name: "Birthday", icon: <FaBirthdayCake className="w-5 h-5"/>, content: "April 2, 2001"}
 ];
 
-export default async function Card({className}: {className?: string}){
+export default async function Card({className, children}: {className?: string, children?: JSX.Element}){
 
     const t = await getTranslations("Index");
 
     return(
         <aside className={cn("xl:w-[21%] 2xl:w-[18%] gap-4 py-4 px-5 bg-slate-900 h-fit rounded-2xl flex flex-col items-center fixed overflow-hidden text-white", className)}>
+            {children}
             <div className="flex items-center justify-center py-1 w-full">
                 <Link href={t('lang') === "en" ? "/es":"/en"} className="py-1 px-3 rounded-lg hover:text-white
                 hover:bg-indigo-400 cursor-pointer">

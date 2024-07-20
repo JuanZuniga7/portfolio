@@ -1,31 +1,24 @@
 "use server";
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarTrigger,
-} from "@/shadcn/ui/menubar";
-import getNav from "../data/header";
-import Link from "next/link";
 import { getTranslations } from "next-intl/server";
-import { cn } from "../lib/utils";
+import getNav from "../data/header";
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarTrigger } from "@radix-ui/react-menubar";
+import Link from "next/link";
 
-export default async function Menu({className}: {className?: string}) {
-  const t = await getTranslations("Index");
-  const en = await getNav(t('lang'));
+export default async function MobileNav({mb}:{mb?: boolean}) {
+
+    const t = await getTranslations("Index");
+    const en = await getNav(t('lang'));
 
   return (
-    <header className={cn("hidden lg:flex fixed lg:top-2 lg:right-2 w-fit h-fit", className)}>
-      <Menubar className="bg-transparent backdrop-blur-2xl lg:py-2 lg:px-5 flex items-center lg:gap-2 border-0">
+    <nav className="w-full h-fit flex items-center justify-center">
+      <Menubar className="bg-transparent backdrop-blur-2xl lg:py-2 lg:px-5 w-full flex items-center justify-between lg:gap-2 border-0">
         {en.map((element, index) => (
           <MenubarMenu key={index}>
             <MenubarTrigger
               className="text-white data-[state=open]:bg-indigo-500 focus:bg-indigo-500
-                          data-[state=open]:text-white rounded-lg cursor-pointer focus:text-white"
+                          data-[state=open]:text-white rounded-lg cursor-pointer focus:text-white px-2 py-1"
             >
-              {element.subElements !== undefined ? (
+              {element.subElements !== undefined && mb !== true ? (
                 <div className="flex items-center text-xs lg:text-sm gap-0.5">
                   {element.icon} {element.name}
                 </div>
@@ -38,7 +31,7 @@ export default async function Menu({className}: {className?: string}) {
                 </Link>
               )}
             </MenubarTrigger>
-            {element.subElements !== undefined && (
+            {element.subElements !== undefined && mb !== true && (
               <MenubarContent
                 className="bg-transparent border-0 text-white backdrop-blur-2xl
                               shadow-xl shadow-indigo-800 py-2 px-4"
@@ -72,6 +65,6 @@ export default async function Menu({className}: {className?: string}) {
           </MenubarMenu>
         ))}
       </Menubar>
-    </header>
+    </nav>
   );
 }
