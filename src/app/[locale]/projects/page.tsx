@@ -14,12 +14,12 @@ export default async function Projects() {
 
   return (
     <Section id="projects" name="projects">
-      <ul className="grid grid-cols-4 h-fit gap-5">
+      <ul className="grid grid-cols-1 px-5 xl:grid-cols-4 h-fit gap-5">
             {data.map((project, index) => (
                 <li key={index} className="border-2 border-indigo-900 rounded-xl flex flex-col items-center 
-                overflow-hidden text-lg p-4 h-full gap-2 bg-secondary pb-4">
+                overflow-hidden text-sm xl:text-lg p-4 h-full gap-2 bg-secondary pb-4">
                     <Image src={project.cover} alt={project.name} width={500} height={500} className="w-full rounded-xl" />
-                    <h4 className="text-xl italic">{project.name}</h4>
+                    <h4 className="text:lg xl:text-xl italic">{project.name}</h4>
                     <div className="flex gap-2 capitalize">
                         <span className="text-violet-400">{t('status')}</span> :
                         <span className={project.status === "completed" ? "text-green-400" : "text-red-400"}>

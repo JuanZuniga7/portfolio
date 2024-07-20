@@ -14,8 +14,8 @@ export default async function Skills(){
             <ul className="flex flex-col gap-5">
                 {data.map((category, index) => (
                     <li key={index} className="p-8 flex flex-col gap-5">
-                        <h3 className="text-3xl italic">{category.categoryName}</h3>
-                        <ul className="grid grid-cols-4 gap-5">
+                        <h3 className="text-2xl lg:text-3xl italic">{category.categoryName}</h3>
+                        <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
                             {category.skills.map((skill, index) => (
                                 <li key={index} className="border-2 from-[#0d1224] border-[#1b2c68a0] 
                                         w-full h-full p-4 rounded-2xl flex flex-col gap-y-5 
@@ -25,7 +25,7 @@ export default async function Skills(){
                                         {skill.icon}
                                         <span>{skill.name}</span>
                                     </div>
-                                    <div>
+                                    <div className="text-sm">
                                         <p>
                                             <span className="text-indigo-300 capitalize">{t('level')}</span>
                                             : {skill.level}

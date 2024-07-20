@@ -10,6 +10,7 @@ import {MdOutlineMail} from "react-icons/md";
 import {FaLocationCrosshairs} from "react-icons/fa6";
 import DownloadCV from "@/common/components/client/DownloadCV";
 import {getTranslations} from "next-intl/server";
+import { cn } from "../lib/utils";
 
 interface IContactData{
     icon: JSX.Element,
@@ -24,20 +25,19 @@ const contactData: IContactData[] = [
     {name: "Birthday", icon: <FaBirthdayCake className="w-5 h-5"/>, content: "April 2, 2001"}
 ];
 
-export default async function Card(){
+export default async function Card({className}: {className?: string}){
 
     const t = await getTranslations("Index");
 
     return(
-        <aside className="w-[18%] gap-4 py-4 px-5 bg-slate-900 h-fit rounded-2xl flex flex-col items-center fixed
-        overflow-hidden text-white">
+        <aside className={cn("lg:w-[20%] 2xl:w-[18%] gap-4 py-4 px-5 bg-slate-900 h-fit rounded-2xl flex flex-col items-center fixed overflow-hidden text-white", className)}>
             <div className="flex items-center justify-center py-1 w-full">
                 <Link href={t('lang') === "en" ? "/es":"/en"} className="py-1 px-3 rounded-lg hover:text-white
                 hover:bg-indigo-400 cursor-pointer">
                     <IoLanguage className="w-5 h-5"/>
                 </Link>
             </div>
-            <Image src={profile} alt="Juan Zuniga" width={200} height={200} className="rounded-full w-48 h-48"/>
+            <Image src={profile} alt="Juan Zuniga" width={200} height={200} className="rounded-full w-32 h-32 2xl:w-48 2xl:h-48"/>
             <div className="flex flex-col gap-5 w-full h-full items-center">
                 <div className="w-full flex flex-col items-center">
                     <h1 className="text-3xl font-semibold">{t('name')}</h1>

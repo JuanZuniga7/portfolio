@@ -15,7 +15,7 @@ export default async function AboutMe(){
 
     return(
         <Section name="whoAmI" id="about-me">
-            <article className="ml-6 font-serif flex flex-col gap-2 text-xl">
+            <article className="ml-6 font-serif flex flex-col gap-2 text-sm md:text-base lg:text-xl">
                 {data.lines.map((line, j) => (
                     <div key={j}>
                         {line.words.map((word, k) => (

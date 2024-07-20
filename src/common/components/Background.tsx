@@ -4,6 +4,6 @@ import hero from "@/common/assets/svg/hero.svg"
 
 export default async function Background(){
     return(
-        <Image src={hero} alt="Background" className="w-full h-full fixed -top-5 -right-1/4 -z-10"/>
+        <Image src={hero} alt="Background" className="w-screen h-screen fixed top-0 right-0 -z-10"/>
     )
 }

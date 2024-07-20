@@ -11,7 +11,7 @@ export default async function Services(){
 
     return(
         <Section id="services" name="services">
-            <Card data={data} className="grid-cols-4 py-5" />
+            <Card data={data} className="xl:grid-cols-4 md:grid-cols-2 py-5" />
         </Section>
     )
 }

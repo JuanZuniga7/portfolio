@@ -11,7 +11,7 @@ export default async function Hobbies() {
 
     return (
         <Section id="hobbies" name="hobbies">
-            <Card data={data} />
+            <Card data={data} className="grid-cols-2" />
         </Section>
     );
 }  

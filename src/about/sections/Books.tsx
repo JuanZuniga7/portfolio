@@ -11,7 +11,7 @@ export default async function Books(){
 
     return(
         <Section id="books" name="books">
-            <ul className="grid grid-cols-3 w-full h-fit gap-5">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5 w-full h-fit gap-5">
                 {data.map((book, i) => (
                     <li key={i} className="w-full h-full flex border-2 border-transparent rounded-2xl overflow-hidden">
                         <Image src={book.image} alt={book.title} width={200} height={400} className="w-36 h-full"/>

@@ -28,5 +28,4 @@ export const en: IElement[] = [
         ]
     },
     {name: "Projects", icon: <FaCodeBranch className="w-4 h-4"/>, link: "projects"},
-    {name: "Blog", icon: <ImBlog className="w-4 h-4"/>, link: "blog"},
 ];

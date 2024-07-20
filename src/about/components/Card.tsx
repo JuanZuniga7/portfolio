@@ -4,7 +4,7 @@ import { IHobbieCard } from "../data/IHobbieCard";
 
 export default async function Card({ data, className }: { data: IHobbieCard[], className?: string }) {
   return (
-    <ul className={cn("grid grid-cols-5 gap-5 h-fit", className)}>
+    <ul className={cn("grid grid-cols-1 px-5 xl:grid-cols-5 gap-5 h-fit", className)}>
       {data.map((hobbie, i) => (
         <li
           key={i}
@@ -13,9 +13,9 @@ export default async function Card({ data, className }: { data: IHobbieCard[], c
         >
           <div className="flex items-center justify-between">
             {hobbie.icon}
-            <span className="text-2xl italic">{hobbie.title}</span>
+            <span className="text-base md:text-lg xl:text-2xl italic">{hobbie.title}</span>
           </div>
-          <p className="w-full text-wrap text-center">{hobbie.description}</p>
+          <p className="w-full text-sm md:text-base xl:text-lg text-wrap text-center">{hobbie.description}</p>
         </li>
       ))}
     </ul>

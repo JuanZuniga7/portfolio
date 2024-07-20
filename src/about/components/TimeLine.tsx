@@ -12,7 +12,9 @@ export default function TimeLine({data}: Props){
 
   return (
     <div className="flex flex-col w-full min-h-96 h-fit items-center justify-between gap-5 p-5">
-      <p className="font-bold text-4xl capitalize text-violet-500">{data[activeIndex].title}</p>
+      <p className="font-bold text-xl md:text-2xl xl:text-4xl capitalize text-violet-500">
+        {data[activeIndex].title}
+        </p>
       <div className="flex items-center justify-center w-full">
         <div className="w-fit h-1 bg-indigo-400 flex items-center justify-center gap-5">
           {data.map((item, i) => (
@@ -26,7 +28,7 @@ export default function TimeLine({data}: Props){
       </div>
       <div className="flex flex-col items-center gap-2">
           {data[activeIndex].description.map((item, i) => (
-            <span key={i} className="text-xl">
+            <span key={i} className="text-base md:text-lg lg:text-xl">
               {item}
             </span>
           ))}
