@@ -10,35 +10,35 @@ import work from "@/about/assets/svg/soft/work.svg";
 import spanish from "@/about/assets/svg/language/spanish.svg";
 import english from "@/about/assets/svg/language/usa.svg";
 //technical
-import architecture from "@/about/assets/svg/technical/architecture.svg";
-import docker from "@/about/assets/svg/technical/docker.svg";
-import linux from "@/about/assets/svg/technical/linux.svg";
-import test from "@/about/assets/svg/technical/test.svg";
-import nginx from "@/about/assets/svg/technical/nginx.svg";
-import kubernetes from "@/about/assets/svg/technical/kubernetes.svg";
-import git from "@/about/assets/svg/technical/git.svg";
-import azure from "@/about/assets/svg/technical/azure.svg";
-import aws from "@/about/assets/svg/technical/aws.svg";
-import uml from "@/about/assets/svg/technical/uml.svg";
-import dbdesign from "@/about/assets/svg/technical/dbdesign.svg";
-import grandle from "@/about/assets/svg/technical/grandle.svg";
+import architecture from "@/common/assets/svg/technical/architecture.svg";
+import docker from "@/common/assets/svg/technical/docker.svg";
+import linux from "@/common/assets/svg/technical/linux.svg";
+import test from "@/common/assets/svg/technical/test.svg";
+import nginx from "@/common/assets/svg/technical/nginx.svg";
+import kubernetes from "@/common/assets/svg/technical/kubernetes.svg";
+import git from "@/common/assets/svg/technical/git.svg";
+import azure from "@/common/assets/svg/technical/azure.svg";
+import aws from "@/common/assets/svg/technical/aws.svg";
+import uml from "@/common/assets/svg/technical/uml.svg";
+import dbdesign from "@/common/assets/svg/technical/dbdesign.svg";
+import grandle from "@/common/assets/svg/technical/grandle.svg";
 //programming languages
-import js from "@/about/assets/svg/programming/js.svg";
-import cs from "@/about/assets/svg/programming/cs.svg";
-import typescript from "@/about/assets/svg/programming/typescript.svg";
-import java from "@/about/assets/svg/programming/java.svg";
+import js from "@/common/assets/svg/languages/js.svg";
+import cs from "@/common/assets/svg/languages/cs.svg";
+import typescript from "@/common/assets/svg/languages/typescript.svg";
+import java from "@/common/assets/svg/languages/java.svg";
 //frameworks
-import asp from "@/about/assets/svg/frameworks/asp.svg"; //advanced
-import nest from "@/about/assets/svg/frameworks/nest.svg"; //intermediate
-import astro from "@/about/assets/svg/frameworks/astro.svg"; //intermediate
-import next from "@/about/assets/svg/frameworks/next.svg"; //advanced
-import react from "@/about/assets/svg/frameworks/react.svg"; //advanced
-import spring from "@/about/assets/svg/frameworks/spring.svg"; //intermediate
+import asp from "@/common/assets/svg/frameworks/asp.svg"; //advanced
+import nest from "@/common/assets/svg/frameworks/nest.svg"; //intermediate
+import astro from "@/common/assets/svg/frameworks/astro.svg"; //intermediate
+import next from "@/common/assets/svg/frameworks/next.svg"; //advanced
+import react from "@/common/assets/svg/frameworks/react.svg"; //advanced
+import spring from "@/common/assets/svg/frameworks/spring.svg"; //intermediate
 //databases
-import mongodb from "@/about/assets/svg/databases/mongodb.svg";
-import postgres from "@/about/assets/svg/databases/postgres.svg";
-import sqlserver from "@/about/assets/svg/databases/sqlserver.svg";
-import redis from "@/about/assets/svg/databases/redis.svg";
+import mongodb from "@/common/assets/svg/databases/mongodb.svg";
+import postgres from "@/common/assets/svg/databases/postgres.svg";
+import sqlserver from "@/common/assets/svg/databases/sqlserver.svg";
+import redis from "@/common/assets/svg/databases/redis.svg";
 
 export default async function getSkills(lang: string): Promise<ISkills[]>{
     return lang === "en" ? en : es;

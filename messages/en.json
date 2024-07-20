@@ -34,5 +34,15 @@
     "level": "Level",
     "learning": "Learning from",
     "description": "Description"
+  },
+  "projects":{
+    "title": "Projects",
+    "repo": "Repository",
+    "privacity": "Privacity",
+    "private": "is private project",
+    "public": "is public project",
+    "status": "Status",
+    "completed": "Completed",
+    "inProgress": "In Progress"
   }
 }

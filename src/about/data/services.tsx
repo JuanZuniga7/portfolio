@@ -1,9 +1,9 @@
 import { IHobbieCard } from "../data/IHobbieCard";
 import Image from 'next/image';
-import js from '@/about/assets/svg/programming/js.svg';
+import js from '@/common/assets/svg/languages/js.svg';
 import wasm from '@/about/assets/svg/wasm.svg';
-import astro from '@/about/assets/svg/frameworks/astro.svg';
-import python from '@/about/assets/svg/programming/python.svg';
+import astro from '@/common/assets/svg/frameworks/astro.svg';
+import python from '@/common/assets/svg/languages/python.svg';
 import server from '@/about/assets/svg/server.svg';
 
 export default async function getServices(lang: string): Promise<IHobbieCard[]> {
