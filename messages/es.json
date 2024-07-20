@@ -1,5 +1,48 @@
 {
   "Index": {
-    "lang": "es"
+    "lang": "es",
+    "name": "Juan C. Zuñiga",
+    "part1": "Hola a todos, soy",
+    "part2": "Soy un Profesional",
+    "fullName": "Juan Camilo Zuñiga",
+    "profession": "Ingeniero de Sistemas",
+    "download": "Descargar CV"
+  },
+  "services": {
+    "title": "Servicios"
+  },
+  "whoAmI": {
+    "title": "¿Quién soy?"
+  },
+  "hobbies": {
+    "title": "Pasatiempos"
+  },
+  "books": {
+    "title": "Libros"
+  },
+  "experience": {
+    "title": "Experiencia"
+  },
+  "education": {
+    "title": "Educación"
+  },
+  "certifications": {
+    "title": "Certificaciones"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "level": "Nivel",
+    "learning": "Aprendiendo de",
+    "description": "Descripción"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "repo": "Repositorio",
+    "privacity": "Privacidad",
+    "private": "es proyecto privado",
+    "public": "es proyecto público",
+    "status": "Estado",
+    "completed": "Completado",
+    "inProgress": "En Progreso"
   }
 }

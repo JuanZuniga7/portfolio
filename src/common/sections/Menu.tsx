@@ -7,12 +7,13 @@ import {
   MenubarSeparator,
   MenubarTrigger,
 } from "@/shadcn/ui/menubar";
-import { en } from "@/common/data/header";
+import getNav from "../data/header";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
 export default async function Menu() {
   const t = await getTranslations("Index");
+  const en = await getNav(t('lang'));
 
   return (
     <header className="hidden lg:flex fixed lg:top-2 lg:right-2 w-fit h-fit">

@@ -14,7 +14,11 @@ interface IElement{
     subElements?: IElement[];
 }
 
-export const en: IElement[] = [
+export default async function getNav(lang: string): Promise<IElement[]>{
+    return lang === "en" ? en : es;
+}
+
+const en: IElement[] = [
     {name: "Home", icon: <GoHomeFill className="w-5 h-5"/>, link: ""},
     {name: "About", icon: <FaUser className="w-4 h-4"/>, link: "about", 
         subElements: [
@@ -28,4 +32,20 @@ export const en: IElement[] = [
         ]
     },
     {name: "Projects", icon: <FaCodeBranch className="w-4 h-4"/>, link: "projects"},
+];
+
+const es: IElement[] = [
+    {name: "Inicio", icon: <GoHomeFill className="w-5 h-5"/>, link: ""},
+    {name: "Acerca de", icon: <FaUser className="w-4 h-4"/>, link: "about", 
+        subElements: [
+            {name: "Servicios", icon: <MdHomeRepairService className="w-4 h-4"/>, link: "services"},
+            {name: "Acerca de mi", icon: <RiFolderUserLine className="w-4 h-4"/>, link: "about-me"},
+            {name: "Hobbies", icon: <FaBasketballBall className="w-4 h-4"/>, link: "hobbies"},
+            {name: "Libros", icon: <BsBook className="w-4 h-4"/>, link: "books"},
+            {name: "Experiencia", icon: <MdWork className="w-4 h-4"/>, link: "experience"},
+            {name: "Educación", icon: <FaUserGraduate className="w-4 h-4"/>, link: "education"},
+            {name: "Habilidades", icon: <CiBoxList className="w-4 h-4"/>, link: "skills"},
+        ]
+    },
+    {name: "Proyectos", icon: <FaCodeBranch className="w-4 h-4"/>, link: "projects"},
 ];
